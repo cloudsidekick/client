@@ -46,7 +46,7 @@ class UpdateUser(ctmcommands.cmd.CSKCommand):
                Param(name='forcechange', short_name='f', long_name='forcechange',
                      optional=True, ptype='integer',
                      doc='Require user to change password. Default is "true" (1) if omitted. (Valid values: 0 or 1).',
-                     choices=[0, 1]),
+                     choices=[0, 1], default=1),
                Param(name='status', short_name='s', long_name='status',
                      optional=True, ptype='string',
                      doc='Status of the new account. Default is "enabled" if omitted. (Valid values: enabled, disabled, locked)',

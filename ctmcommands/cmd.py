@@ -401,7 +401,7 @@ class CSKCommand(object):
         args = data
         argstr = ""
         for param in parameters:
-            if getattr(self, param, None):
+            if getattr(self, param, None) is not None:
                 args[param] = getattr(self, param)
 
         # if post then args are a dict, if get args are qs
